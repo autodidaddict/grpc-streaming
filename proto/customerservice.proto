@@ -1,0 +1,26 @@
+syntax = "proto3";
+package customerservice;
+
+service Customers {
+    rpc get_customer_details(stream CustomerRequest) returns (stream Customer);
+}
+
+message CustomerRequest {
+    string customer_id = 1;
+}
+
+message Customer {
+    string customer_id = 1;
+    string given_name = 2;
+    string surname = 3;
+    Address address = 4;
+}
+
+message Address {
+    string line1 = 1;
+    string line2 = 2;
+    string city = 3;
+    string state = 4;
+    string zip = 5;
+}
+
