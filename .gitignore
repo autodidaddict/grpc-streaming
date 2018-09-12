@@ -13,3 +13,7 @@
 
 vendor
 .idea/
+cmd/customerctl/customerctl
+cmd/customerd/customerd
+cmd/customerd/main
+cmd/customerctl/main
